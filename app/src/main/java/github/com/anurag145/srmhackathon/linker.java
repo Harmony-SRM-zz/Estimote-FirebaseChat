@@ -6,5 +6,17 @@ package github.com.anurag145.srmhackathon;
 
 public class linker  {
 
-   static String email;
+     static String email;
+     static String bio;
+   public linker() {
+
+   }
+
+   public static String getEmail() {
+      return email;
+   }
+
+
+
+
 }

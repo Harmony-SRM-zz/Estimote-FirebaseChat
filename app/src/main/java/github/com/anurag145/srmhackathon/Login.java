@@ -23,18 +23,21 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Login extends AppCompatActivity  {
     private static final String SHAREDPREFFILE = "temp";
     EditText editText;
+    EditText editText1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         editText=(EditText) findViewById(R.id.editText);
+        editText1=(EditText)findViewById(R.id.editText1);
         SharedPreferences prefs = getSharedPreferences(SHAREDPREFFILE, Context.MODE_PRIVATE);
         if(!(prefs.getString("login",null)==null))
+
         {
-            startActivity(new Intent(Login.this,MainActivity.class));
-            finish();
-        }else
             linker.email=prefs.getString("login",null);
+            startActivity(new Intent(Login.this,FirebaseActivity.class));
+            finish();
+        }
     }
 
 
@@ -46,12 +49,16 @@ public class Login extends AppCompatActivity  {
             SharedPreferences prefs = getSharedPreferences(SHAREDPREFFILE, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("login",editText.getText().toString());
-            editor.commit();
-            linker.email=editText.getText().toString();
+                        editor.commit();
+
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("message");
-            myRef.child("Users").child("user"+linker.email).setValue(linker.email);
-            startActivity(new Intent(Login.this,MainActivity.class));
+            linker.bio=editText1.getText().toString();
+            linker.email=editText.getText().toString();
+            Log.e("tag",linker.email);
+
+            myRef.child("Users").child("user"+linker.getEmail()).setValue(linker.email+"-"+linker.bio);
+            startActivity(new Intent(Login.this,FirebaseActivity.class));
             finish();
 
         }
