@@ -1,5 +1,10 @@
 package github.com.anurag145.srmhackathon;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,6 +50,35 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public void getjson(String URL, final Context context)
+    {
+        class GETJSON extends AsyncTask<String,Void,String>
+        {    ProgressDialog progressDialog;
+            @Override
+            protected void onPreExecute() {
+
+                super.onPreExecute();
+                progressDialog=ProgressDialog.show(context,"LOADING STUFF",null,true,true);
+            }
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                progressDialog.dismiss();
+            }
+
+            @Override
+            protected void onCancelled(String s) {
+                super.onCancelled(s);
+
+            }
+
+            @Override
+            protected String doInBackground(String... strings) {
+                return null;
+            }
+        }
     }
     @Override
     protected void onResume() {
