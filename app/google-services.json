@@ -1,58 +1,27 @@
 {
   "project_info": {
-    "project_number": "507859732160",
-    "firebase_url": "https://srmhackathon.firebaseio.com",
-    "project_id": "srmhackathon",
-    "storage_bucket": "srmhackathon.appspot.com"
+    "project_number": "619693466430",
+    "firebase_url": "https://srmhackathon-8408a.firebaseio.com",
+    "project_id": "srmhackathon-8408a",
+    "storage_bucket": "srmhackathon-8408a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:507859732160:android:a84569ff3465b498",
-        "android_client_info": {
-          "package_name": "com.estimote.proximitycontent"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "507859732160-ip8jriqai24os8bvr72tki6as8g3katu.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAFPL7L8k0bpNfPEaNYtdu4p2yVzR21TMM"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:507859732160:android:b8261091eead1c61",
+        "mobilesdk_app_id": "1:619693466430:android:b8261091eead1c61",
         "android_client_info": {
           "package_name": "github.com.anurag145.srmhackathon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "507859732160-ip8jriqai24os8bvr72tki6as8g3katu.apps.googleusercontent.com",
+          "client_id": "619693466430-s7nfpo2c3jdl1taug9k665jibsobhh90.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAFPL7L8k0bpNfPEaNYtdu4p2yVzR21TMM"
+          "current_key": "AIzaSyDTABLgfmYRSpbFcCX3PZ-pTD4c3iP_FDc"
         }
       ],
       "services": {

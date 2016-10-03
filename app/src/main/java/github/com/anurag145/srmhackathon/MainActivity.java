@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
 
                           textView.setText("FOUND 1 "+beaconDetails.getBeaconName());
-                          getjson("",getApplicationContext());
+                         // getjson("",getApplicationContext());
 
                 } else {
                     textView.setText("Kya dekh raha hai bhai niche scroll kar");
