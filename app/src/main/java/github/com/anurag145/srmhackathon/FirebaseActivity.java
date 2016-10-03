@@ -15,10 +15,7 @@ public class FirebaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
         editText=(EditText)findViewById(R.id.editText);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
 
-        myRef.child("hello1").setValue("Hello, World!");
     }
     public void onClick(View view)
     {
@@ -27,7 +24,7 @@ public class FirebaseActivity extends AppCompatActivity {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("message");
 
-            myRef.child("hello2").setValue(editText.getText().toString());
+            myRef.child("Channel").child("user").setValue("user ");
         }
     }
 }
