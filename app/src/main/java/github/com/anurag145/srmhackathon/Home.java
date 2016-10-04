@@ -21,8 +21,11 @@ public class Home extends AppCompatActivity {
             case R.id.button1 : startActivity(new Intent(Home.this,MainActivity.class));
                                   break;
             case R.id.button2 : startActivity(new Intent(Home.this,FirebaseActivity.class));
-                break;
 
+                break;
+            case R.id.button3 :startActivity(new Intent(Home.this,weby.class));
+
+                break;
 
         }
     }
