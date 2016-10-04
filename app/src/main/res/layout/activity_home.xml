@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="#000000"
+    tools:context="github.com.anurag145.srmhackathon.Home">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1.0"
+
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onclick"
+        android:background="#73b7ae"
+        android:drawableTop="@drawable/loc"
+        android:layout_weight="1.0"
+        android:textSize="27dp"
+        android:endColor="#00FF00"
+        android:textColor="#ffffff"
+        android:paddingTop="32sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:text="See new Location" />
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a02c5b"
+        android:layout_weight="1.0"
+        android:textSize="27dp"
+        android:endColor="#00FF00"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:drawableTop="@drawable/grp"
+        android:paddingTop="32sp"
+        android:text="Find your Mate"
+        android:fontFamily="serif" />
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1.0"
+    android:textSize="27dp"
+    android:orientation="horizontal" >
+
+    <Button
+        android:onClick="onclick"
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@android:color/holo_purple"
+        android:layout_weight="1.0"
+        android:textSize="27dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingTop="32sp"
+        android:drawableTop="@drawable/bot"
+        android:fontFamily="serif"
+        android:text="Talk to someone smarter" />
+
+
+
+</LinearLayout>
+</LinearLayout>

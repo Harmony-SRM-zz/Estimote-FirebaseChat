@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_firebase"
+    android:background="@drawable/abc"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,48 +11,77 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="github.com.anurag145.srmhackathon.FirebaseActivity">
 
-    <EditText
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type city name"
-        android:id="@+id/editText1"
+        android:visibility="gone"
+        android:id="@+id/lays"
+        android:gravity="bottom"
+        android:layout_alignParentStart="true">
 
-        />
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:visibility="gone">
-        <TextView
+        <EditText
+            android:layout_width="240dp"
+            android:id="@+id/editText2"
+            android:hint="Say Hi"
+            android:textColor="#000000"
+            android:layout_marginTop="420dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Send"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:text="hello"/>
-    </ScrollView>
 
-
+            android:layout_marginStart="240dp"
+            android:layout_weight="1"
+            android:layout_alignTop="@+id/editText2" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
         android:text="submit"
-        android:onClick="onClick"/>
+        android:visibility="visible"
+        android:onClick="onClick"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
 
-    <Button
-        android:text="Send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:visibility="gone"
-        android:layout_alignParentEnd="true" />
     <EditText
-        android:layout_width="250dp"
-        android:id="@+id/editText2"
-        android:hint="Say Hi"
-        android:visibility="gone"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content" />
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type city name"
+        android:id="@+id/editText1"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/relativeLayout2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textColor="#000000"
+                android:text="hello"/>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

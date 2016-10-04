@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity  {
 
         {
             linker.email=prefs.getString("login",null);
-            startActivity(new Intent(Login.this,FirebaseActivity.class));
+            startActivity(new Intent(Login.this,Home.class));
             finish();
         }
     }
@@ -57,8 +57,8 @@ public class Login extends AppCompatActivity  {
             linker.email=editText.getText().toString();
             Log.e("tag",linker.email);
 
-            myRef.child("Users").child("user"+linker.getEmail()).setValue(linker.email+"-"+linker.bio);
-            startActivity(new Intent(Login.this,FirebaseActivity.class));
+            myRef.child("Users").child("user"+linker.bio).setValue(linker.email+"-"+linker.bio);
+            startActivity(new Intent(Login.this,Home.class));
             finish();
 
         }
